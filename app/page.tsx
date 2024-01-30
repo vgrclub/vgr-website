@@ -1,59 +1,21 @@
 import Image from 'next/image'
-
+import Carousel from './components/Carousel'
 //TODO: this will be homepage
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">ValleyGrlsRun</h1>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24" data-theme="mytheme">
+      <div className="hero min-h-screen bg-base-200 mb-10" data-theme="mytheme">
+        <div className="hero-content text-center flex flex-col">
+          <h1 className="text-8xl font-bold ">ValleyGrlsRun</h1>
+          <div className="max-w-md ">
             <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
             {/* <button className="btn btn-primary">Get Started</button> */}
           </div>
         </div>
       </div>
       {/* <div className='flex black font-bold'>ValleyGrlsRun</div> */}
-      <div className="hero-content">
-        <div className="carousel w-full">
-          <div id="slide1" className="carousel-item relative w-full">
-            <img src="assets/images/R6II9580.jpg" className="w-full h-5/6" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" className="btn btn-circle">❮</a>
-              <a href="#slide2" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-          <div id="slide2" className="carousel-item relative w-full">
-            <img src="assets/images/IMG_2926.jpeg" className="w-full" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="btn btn-circle">❮</a>
-              <a href="#slide3" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-          <div id="slide3" className="carousel-item relative w-full">
-            <img src="assets/images/IMG_0477.jpeg" className="w-full" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="btn btn-circle">❮</a>
-              <a href="#slide4" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-          <div id="slide4" className="carousel-item relative w-full">
-            <img src="assets/images/DSCN0488.jpeg" className="w-full" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide3" className="btn btn-circle">❮</a>
-              <a href="#slide5" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-          <div id="slide5" className="carousel-item relative w-full">
-            <img src="assets/images/R6II9589.jpg" className="w-full" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" className="btn btn-circle">❮</a>
-              <a href="#slide1" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Carousel />
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
