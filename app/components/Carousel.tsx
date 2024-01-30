@@ -2,16 +2,16 @@ import React from 'react'
 
 const Carousel = () => {
   return (
-    <div className="hero-content bg-secondary ">
-        <div className="carousel w-full">
-          <div id="slide1" className="carousel-item relative w-full">
-            <img src="assets/images/R6II9580.jpg" className="w-full h-5/6" />
+    <div className="hero-content bg-secondary h-5/6">
+        <div className="carousel w-full h-5/6">
+          <div id="slide1" className="carousel-item relative w-full h-5/6">
+            <img src="assets/images/R6II9580.jpg" className="w-full " />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" className="btn btn-circle">❮</a>
               <a href="#slide2" className="btn btn-circle">❯</a>
             </div>
           </div>
-          <div id="slide2" className="carousel-item relative w-full">
+          {/* <div id="slide2" className="carousel-item relative w-full">
             <img src="assets/images/IMG_2926.jpeg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide1" className="btn btn-circle">❮</a>
@@ -38,7 +38,7 @@ const Carousel = () => {
               <a href="#slide4" className="btn btn-circle">❮</a>
               <a href="#slide1" className="btn btn-circle">❯</a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
   )
