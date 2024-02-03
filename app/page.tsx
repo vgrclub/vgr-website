@@ -10,16 +10,16 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between" data-theme="mytheme">
 
-      <div className="hero min-h-screen mb-10" style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
+      <div className="hero mb-10" style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
 
-        <div className="hero-content w-full h-full flex-col justify-start text-center text-neutral-content mt-56">
-          <div className=' bg-white w-9/12 h-auto bg-opacity-70 '>
-            <h1 className={`mb-5 text-8xl italic font-bold text-black ${commissioner.variable} font-sans`}>ValleyGrlsRun</h1>
+        <div className="hero-content w-full h-full flex-col justify-start text-center text-neutral-content mt-12 md:mt-48">
+          <div className='flex justify-center w-9/12 h-auto '>
+            <h1 className={`tracking-wider text-5xl md:text-8xl lg:text-9xl italic font-bold ${commissioner.variable} font-sans`}>ValleyGrlsRun</h1>
           </div>
 
-          <div className="max-w-md mt-56">
-            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          <div className="max-w-lg mt-20 h-80">
+            <p className="mb-5 text-lg ">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
             {/* <button className="btn btn-primary">Get Started</button> */}
           </div>
         </div>
