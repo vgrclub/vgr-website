@@ -1,21 +1,41 @@
+'use client'
 import Image from 'next/image'
 import Carousel from './components/Carousel'
+import { motion } from 'framer-motion';
 //TODO: this will be homepage
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24" data-theme="mytheme">
-      <div className="hero min-h-screen bg-base-200 mb-10" data-theme="mytheme">
-        <div className="hero-content text-center flex flex-col">
-          <h1 className="text-8xl font-bold ">ValleyGrlsRun</h1>
-          <div className="max-w-md ">
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            {/* <button className="btn btn-primary">Get Started</button> */}
+    <main className="flex min-h-screen flex-col items-center justify-between" data-theme="mytheme">
+      <div className="hero min-h-screen mb-10" style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">ValleyGrlsRun</h1>
+            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>
+      {/* <div className=" min-h-screen bg-base-200 mb-10  " data-theme="mytheme">
+        <div className="hero-content text-center flex flex-col justify-between">
+          <h1 className="text-8xl font-bold ">ValleyGrlsRun</h1>
+          <div className="max-w-md ">
+            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          </div>
+        </div>
+      </div> */}
       {/* <div className='flex black font-bold'>ValleyGrlsRun</div> */}
-      <Carousel />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 1,
+          x: { duration: 1 }
+        }}        >
+        <Carousel />
+      </motion.div>
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
