@@ -30,10 +30,8 @@ export const MenuItem = ({ i, link }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      {/* <div className="icon-placeholder" style={style} /> */}
       <div className="text-placeholder">
         <Link href={link.url}> {link.name}</Link>
-        {/* {link.name} */}
       </div>
     </motion.li>
   );
