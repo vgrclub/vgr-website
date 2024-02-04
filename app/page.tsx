@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Carousel from './components/Carousel'
+import Schedule from './components/Schedule';
 import { motion } from 'framer-motion';
 import { commissioner } from './fonts'
 
@@ -8,9 +9,8 @@ import { commissioner } from './fonts'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between" data-theme="mytheme">
-
-      <div className="hero mb-10" style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
+    <main className="" data-theme="mytheme">
+      <div className="hero " style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
 
         <div className="hero-content w-full h-full flex-col justify-start text-center text-neutral-content mt-12 md:mt-48">
@@ -20,19 +20,19 @@ export default function Home() {
 
           <div className="max-w-lg mt-20 h-80">
             <p className="mb-5 text-lg ">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            {/* <button className="btn btn-primary">Get Started</button> */}
           </div>
         </div>
       </div>
-      {/* <div className=" min-h-screen bg-base-200 mb-10  " data-theme="mytheme">
-        <div className="hero-content text-center flex flex-col justify-between">
-          <h1 className="text-8xl font-bold ">ValleyGrlsRun</h1>
-          <div className="max-w-md ">
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className='flex black font-bold'>ValleyGrlsRun</div> */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 1,
+          x: { duration: 1 }
+        }}        >
+        <Schedule />
+      </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
