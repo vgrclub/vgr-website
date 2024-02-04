@@ -9,13 +9,13 @@ import { commissioner } from './fonts'
 
 export default function Home() {
   return (
-    <main className="" data-theme="mytheme">
+    <main className="flex flex-col items-center bg-primary" data-theme="mytheme">
       <div className="hero " style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
 
         <div className="hero-content w-full h-full flex-col justify-start text-center text-neutral-content mt-12 md:mt-48">
           <div className='flex justify-center w-9/12 h-auto '>
-            <h1 className={`tracking-wider text-5xl md:text-8xl lg:text-9xl italic font-bold ${commissioner.variable} font-sans`}>ValleyGrlsRun</h1>
+            <h1 className={`tracking-wider text-4xl md:text-8xl lg:text-9xl italic font-bold ${commissioner.variable} font-sans`}>ValleyGrlsRun</h1>
           </div>
 
           <div className="max-w-lg mt-20 h-80">
@@ -23,16 +23,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          ease: "linear",
-          duration: 1,
-          x: { duration: 1 }
-        }}        >
-        <Schedule />
-      </motion.div>
+      <Schedule />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

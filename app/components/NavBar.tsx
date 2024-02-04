@@ -1,8 +1,38 @@
 'use client'
 import React, { useState } from 'react'
+import { useRef } from "react";
+import { motion, sync, useCycle } from "framer-motion";
+import { useDimensions } from "../use-dimensions";
+import { MenuToggle } from "./MenuToggle";
+import { Navigation } from "./Navigation";
 import Link from 'next/link'
 import Logo from './Logo'
+
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  closed: {
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40
+    }
+  }
+};
+
 const NavBar = () => {
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
+
   return (
     <header className='bg-white'>
       <nav className='mx-auto flex max-w-8xl items-center justify-between p-2 lg:px-8' aria-label='Global'>
@@ -14,14 +44,27 @@ const NavBar = () => {
           </Link>
         </div>
         {/* mobile menu tab */}
+
         <div className="flex lg:hidden">
-          <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          {/* <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
             <span className="sr-only">Open main menu</span>
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-          </button>
+          </button> */}
+
+          <motion.nav
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}
+          >
+            <motion.div className="background" variants={sidebar} />
+            <Navigation isOpen = {isOpen}/>
+            <MenuToggle toggle={() => toggleOpen()} />
+          </motion.nav>
         </div>
+        
         <div className="hidden lg:flex lg:gap-x-12">
           <Link href="/schedule" className="text-sm font-semibold leading-6 text-gray-900">Schedule</Link>
           <Link href="/events" className="text-sm font-semibold leading-6 text-gray-900">Events</Link>
