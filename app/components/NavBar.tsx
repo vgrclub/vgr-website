@@ -68,7 +68,7 @@ const NavBar = () => {
         <div className="hidden lg:flex lg:gap-x-12">
           <Link href="/schedule" className="text-sm font-semibold leading-6 text-gray-900">Schedule</Link>
           <Link href="/events" className="text-sm font-semibold leading-6 text-gray-900">Events</Link>
-          <Link href="/partners" className="text-sm font-semibold leading-6 text-gray-900">Sponsors</Link>
+          <Link href="/partners" className="text-sm font-semibold leading-6 text-gray-900">Partners</Link>
           <Link href="about" className="text-sm font-semibold leading-6 text-gray-900">About</Link>
           <label className="cursor-pointer grid place-items-center">
             <input type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />

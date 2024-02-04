@@ -31,7 +31,7 @@ const menuVariants = {
 const links = [
   { name: "Schedule", url: "/schedule" },
   { name: "Events", url: "/events" },
-  { name: "Sponsors", url: "/sponsors" },
+  { name: "Partners", url: "/sponsors" },
   { name: "About", url: "/about" },
 ];
 
