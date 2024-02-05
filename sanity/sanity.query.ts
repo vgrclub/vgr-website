@@ -10,6 +10,7 @@ export async function getEvent() {
       date,
       eventImage {alt, "image": asset->url},
       summary,
-    }`
+    }`,
+    { next: { revalidate: 300 } }
   );
 }
