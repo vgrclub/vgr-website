@@ -32,7 +32,7 @@ const menuVariants = {
 const links = [
   // { name: "Schedule", url: "/schedule" },
   { name: "Events", url: "/events" },
-  { name: "Partners", url: "/sponsors" },
+  { name: "Partners", url: "/partners" },
   { name: "About", url: "/about" },
   { name: <InstagramLogo />, url: 'https://www.instagram.com/valleygrlsrun/' }
 ];

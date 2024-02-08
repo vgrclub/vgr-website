@@ -1,16 +1,18 @@
 'use client'
 import Image from 'next/image'
 import Carousel from './components/Carousel'
+import Carousel2 from './components/Carousel2';
 import Schedule from './components/Schedule';
 import { motion } from 'framer-motion';
-import { commissioner } from './fonts'
+import { commissioner, peach } from './fonts'
 
 //TODO: this will be homepage
+
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center bg-primary" data-theme="mytheme">
-      <div className="hero " style={{ backgroundImage: 'url(assets/images/IMG_8934.jpeg)' }}>
+      <div className="hero " style={{ backgroundImage: 'url(assets/images/R6II9580.jpg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
 
         <div className="hero-content w-full h-full flex-col justify-start text-center text-neutral-content mt-12 md:mt-48">
@@ -23,7 +25,16 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          ease: "linear",
+          duration: .5,
+          x: { duration: 1 }
+        }}        > */}
       <Schedule />
+      {/* </motion.div> */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -32,7 +43,7 @@ export default function Home() {
           duration: 1,
           x: { duration: 1 }
         }}        >
-        <Carousel />
+        <Carousel/>
       </motion.div>
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
