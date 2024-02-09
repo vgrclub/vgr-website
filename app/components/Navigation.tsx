@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import InstagramLogo from "./InstagramLogo";
 
+//TODO mobile navigation menu, needs attention on positioning staying in placec
+
 const menuVariants = {
   open: {
     opacity: 1,

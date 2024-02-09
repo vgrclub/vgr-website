@@ -5,7 +5,7 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 //TODO: this component renders on every page, so navbar, footer components can be put here.
 const inter = Inter({ subsets: ['latin'] });
-const noto = Noto_Sans({ subsets: ['latin'] });
+const noto = Noto_Sans({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'ValleyGrlsRun Club',

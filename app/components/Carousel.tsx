@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 
+//TODO need to have carousel ability to swipe on last slide to first slide 
+
 const Carousel = () => {
   return (
     <div className="hero-content bg-primary w-full h-5/6">

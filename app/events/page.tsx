@@ -4,7 +4,9 @@ import type { EventType } from '@/types'
 import Image from 'next/image'
 import { formatDateString } from '../utils'
 import { commissioner } from '../fonts'
-//TODO: this is the events page
+
+//TODO: this is the events page, uses sanity query getEvent to fetch latest event posts
+
 const EventsPage = async () => {
 
   const events: EventType[] = await getEvent();
