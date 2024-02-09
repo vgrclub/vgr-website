@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans } from 'next/font/google'
 import './globals.css'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 //TODO: this component renders on every page, so navbar, footer components can be put here.
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
+const noto = Noto_Sans({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'ValleyGrlsRun Club',
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={noto.className}>
         <NavBar/>
         {children}
         <Footer/>
