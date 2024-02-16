@@ -38,7 +38,7 @@ const NavBar = () => {
 
   return (
     <header className='bg-white'>
-      <nav className='mx-auto flex max-w-8xl items-center justify-between p-2 lg:px-8' aria-label='Global'>
+      <nav className='mx-auto flex max-w-8xl items-center justify-between p-2 lg:px-8 relative' aria-label='Global'>
         {/* logo */}
         <div className='flex lg:flex-1'>
           <Link href="/" className=''>
